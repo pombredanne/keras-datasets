@@ -10,6 +10,7 @@ A repository hosting keras dataset generators
 [![PyPI](https://img.shields.io/pypi/v/keras-datasets.svg)](https://pypi.python.org/pypi/keras-datasets/)
 [![PyUP Updates](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 [![Python 3](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
+[![Documentation Status](https://readthedocs.org/projects/keras-datasets/badge/?version=latest)](http://keras-datasets.readthedocs.io/en/latest/?badge=latest)
 
 # Issues
 

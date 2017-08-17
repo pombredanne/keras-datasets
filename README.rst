@@ -4,7 +4,7 @@ keras\_datasets
 A repository hosting keras dataset generators
 
 |Open Source Love| |license| |GitHub release| |Build Status| |Coverage
-Status| |PyPI| |PyUP Updates| |Python 3|
+Status| |PyPI| |PyUP Updates| |Python 3| |Documentation Status|
 
 Issues
 ======
@@ -108,3 +108,5 @@ https://github.com/DEKHTIARJonathan/keras-datasets/
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
 .. |Python 3| image:: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
+.. |Documentation Status| image:: https://readthedocs.org/projects/keras-datasets/badge/?version=latest
+   :target: http://keras-datasets.readthedocs.io/en/latest/?badge=latest
