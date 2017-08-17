@@ -1,0 +1,8 @@
+title: keras-datasets
+description: Python 2 and 3 interface to download datasets with Keras
+google_analytics:
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
