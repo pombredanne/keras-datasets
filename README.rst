@@ -119,11 +119,11 @@ Running Unit Tests
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
 .. |PyPI Python Versions| image:: https://img.shields.io/pypi/pyversions/keras-datasets.svg
    :target: https://pypi.python.org/pypi/keras-datasets/
-.. |GitHub release| image:: https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg
+.. |GitHub release| image:: https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg?label=github-release
    :target: https://github.com/DEKHTIARJonathan/keras-datasets/releases
-.. |PyPI Release| image:: https://img.shields.io/pypi/v/keras-datasets.svg
+.. |PyPI Release| image:: https://img.shields.io/pypi/v/keras-datasets.svg?label=pypi-release
    :target: https://pypi.python.org/pypi/keras-datasets/
 .. |PyPI Wheel| image:: https://img.shields.io/pypi/wheel/keras-datasets.svg
    :target: https://pypi.python.org/pypi/keras-datasets/
-.. |PyPI| image:: https://img.shields.io/pypi/status/keras-datasets.svg
+.. |PyPI| image:: https://img.shields.io/pypi/status/keras-datasets.svg?label=pypi-status
    :target: https://pypi.python.org/pypi/keras-datasets/

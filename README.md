@@ -13,10 +13,10 @@ A package to download common deep learning and machine datasets, convert them in
 [![Python 3](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 
 [![PyPI Python Versions](https://img.shields.io/pypi/pyversions/keras-datasets.svg)](https://pypi.python.org/pypi/keras-datasets/)
-[![GitHub release](https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg)](https://github.com/DEKHTIARJonathan/keras-datasets/releases)
-[![PyPI Release](https://img.shields.io/pypi/v/keras-datasets.svg)](https://pypi.python.org/pypi/keras-datasets/)
+[![GitHub release](https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg?label=github-release)](https://github.com/DEKHTIARJonathan/keras-datasets/releases)
+[![PyPI Release](https://img.shields.io/pypi/v/keras-datasets.svg?label=pypi-release)](https://pypi.python.org/pypi/keras-datasets/)
 [![PyPI Wheel](https://img.shields.io/pypi/wheel/keras-datasets.svg)](https://pypi.python.org/pypi/keras-datasets/)
-[![PyPI](https://img.shields.io/pypi/status/keras-datasets.svg)](https://pypi.python.org/pypi/keras-datasets/)
+[![PyPI](https://img.shields.io/pypi/status/keras-datasets.svg?label=pypi-status)](https://pypi.python.org/pypi/keras-datasets/)
 
 ## Issues
 
