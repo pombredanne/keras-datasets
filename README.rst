@@ -1,21 +1,28 @@
-keras\_datasets
-===============
+keras-datasets
+==============
 
-A repository hosting keras dataset generators
+A package to download common deep learning and machine datasets, convert
+them in hdf5 format in order to be in your Keras graph with a queue
+runner
 
-|Open Source Love| |license| |GitHub release| |Build Status| |Coverage
-Status| |PyPI| |PyUP Updates| |Python 3| |Documentation Status|
+|Open Source Love| |Open Source License| |GitHub contributors|
+|Documentation Status|
+
+|Build Status| |Coverage| |PyUP Updates| |Python 3|
+
+|PyPI Python Versions| |GitHub release| |PyPI Release| |PyPI Wheel|
+|PyPI|
 
 Issues
-======
+------
 
 Feel free to submit issues and enhancement requests.
 
 Copyright and Licensing
-=======================
+-----------------------
 
-The project is released under the GNU General Public License v3.0, which
-gives you the following rights in summary:
+The project is released under the MIT License, which gives you the
+following rights in summary:
 
 +--------------------+-------------------+----------------------------------+
 | **Permissions**    | **Limitations**   | **Conditions**                   |
@@ -30,7 +37,7 @@ gives you the following rights in summary:
 +--------------------+-------------------+----------------------------------+
 
 Contributing guidelines
-=======================
+-----------------------
 
 Please have a look to the `Contributing Guidelines <CONTRIBUTING.md>`__
 first.
@@ -50,11 +57,13 @@ Installation
 ------------
 
 Available with the Python Package Index:
-https://github.com/DEKHTIARJonathan/keras-datasets/
+https://pypi.python.org/pypi/keras-datasets/
 
 .. code:: shell
 
     pip install keras-datasets
+
+If prefered, the library can be compiled with following commands:
 
 .. code:: shell
 
@@ -76,8 +85,8 @@ https://github.com/DEKHTIARJonathan/keras-datasets/
     ## Then install the library
     python setup.py install
 
-3. Running Unit Tests
-=====================
+Running Unit Tests
+------------------
 
 .. code:: sh
 
@@ -94,19 +103,27 @@ https://github.com/DEKHTIARJonathan/keras-datasets/
 
 .. |Open Source Love| image:: https://badges.frapsoft.com/os/v2/open-source.svg?v=103
    :target: https://opensource.org/licenses/MIT/
-.. |license| image:: https://img.shields.io/github/license/DEKHTIARJonathan/keras-datasets.svg
+.. |Open Source License| image:: https://img.shields.io/github/license/DEKHTIARJonathan/keras-datasets.svg
    :target: https://github.com/DEKHTIARJonathan/keras-datasets/releases
-.. |GitHub release| image:: https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg
+.. |GitHub contributors| image:: https://img.shields.io/github/contributors/DEKHTIARJonathan/keras-datasets.svg
    :target: https://github.com/DEKHTIARJonathan/keras-datasets
+.. |Documentation Status| image:: https://readthedocs.org/projects/keras-datasets/badge/?version=latest
+   :target: http://keras-datasets.readthedocs.io/en/latest/?badge=latest
 .. |Build Status| image:: https://travis-ci.org/DEKHTIARJonathan/keras-datasets.svg?branch=master
    :target: https://travis-ci.org/DEKHTIARJonathan/keras-datasets
-.. |Coverage Status| image:: https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master
+.. |Coverage| image:: https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master
    :target: https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master
-.. |PyPI| image:: https://img.shields.io/pypi/v/keras-datasets.svg
-   :target: https://pypi.python.org/pypi/keras-datasets/
 .. |PyUP Updates| image:: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
 .. |Python 3| image:: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
-.. |Documentation Status| image:: https://readthedocs.org/projects/keras-datasets/badge/?version=latest
-   :target: http://keras-datasets.readthedocs.io/en/latest/?badge=latest
+.. |PyPI Python Versions| image:: https://img.shields.io/pypi/pyversions/keras-datasets.svg
+   :target: https://pypi.python.org/pypi/keras-datasets/
+.. |GitHub release| image:: https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg
+   :target: https://github.com/DEKHTIARJonathan/keras-datasets/releases
+.. |PyPI Release| image:: https://img.shields.io/pypi/v/keras-datasets.svg
+   :target: https://pypi.python.org/pypi/keras-datasets/
+.. |PyPI Wheel| image:: https://img.shields.io/pypi/wheel/keras-datasets.svg
+   :target: https://pypi.python.org/pypi/keras-datasets/
+.. |PyPI| image:: https://img.shields.io/pypi/status/keras-datasets.svg
+   :target: https://pypi.python.org/pypi/keras-datasets/

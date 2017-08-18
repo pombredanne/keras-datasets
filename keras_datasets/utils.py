@@ -1,21 +1,29 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from __future__ import unicode_literals, absolute_import, division, print_function
 import datetime, time, requests
 
-def get_timestamp():
-    return datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
+from enum import Enum
 
-def check_hex_value(str_val):
-    try:
-        hexval = int(str_val, 16)
-        return True
-    except:
-        return False
+class Compression(Enum):
+	NONE = 1
+	GZIP = 2
+	ZLIB = 3
 
-class Enum(object):
+class Subset(Enum):
+	TRAIN = 1
+	TEST = 2
+	VALIDATION = 3
 
-    @classmethod
-    def keys(cls):
-        return [i for i in cls.__dict__.keys() if i[:2] != "__"]
+compression_suffix = {
+	Compression.NONE: '',
+	Compression.GZIP: 'gzip',
+	Compression.ZLIB: 'zlib'
+}
 
-    @classmethod
-    def values(cls):
-        return [cls.__dict__[i] for i in cls.__dict__ if i[:2] != "__"]
+subset_suffix = {
+	Subset.TRAIN:      'train',
+	Subset.TEST:       'test',
+	Subset.VALIDATION: 'validation'
+}
