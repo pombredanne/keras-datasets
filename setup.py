@@ -44,14 +44,26 @@ setup(
 
     classifiers=[
         # How mature is this project? Common values are
-        #   3 - Alpha
-        #   4 - Beta
-        #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        #  1 - Planning
+        #  2 - Pre-Alpha
+        #  3 - Alpha
+        #  4 - Beta
+        #  5 - Production/Stable
+        #  6 - Mature
+        #  7 - Inactive
+        'Development Status :: 1 - Planning',
 
-        # Indicate who your project is intended for
-        'Intended Audience :: Science/Research and Developers',
+        # Indicate who your project is intended for        
+        'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: Information Technology',
+        
+        # Indicate what your project relates to  
+        'Topic :: Scientific/Engineering',
+        'Topic :: Scientific/Engineering :: Image Recognition',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
+        'Topic :: Software Development :: Libraries',
+        'Topic :: Utilities',
 
         # Pick your license as you wish (should match "license" above)
         'License :: OSI Approved :: MIT License',
