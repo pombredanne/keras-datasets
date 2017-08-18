@@ -7,6 +7,7 @@ python:
 - 3.6
 
 install:
+  - pip install --only-binary=numpy,scipy numpy scipy
   - pip install -r requirements.txt
 
 script:

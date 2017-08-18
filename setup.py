@@ -33,11 +33,11 @@ setup(
 
     # Author details
     author='Jonathan DEKHTIAR, Marc MOREAUX',
-    author_email='contact@jonathandekhtiar.eu, marc.moreaux@laas.fr',
+    author_email='contact@jonathandekhtiar.eu, mr.moreaux@gmail.com',
 
     # maintainer Details
     maintainer='Jonathan DEKHTIAR, Marc MOREAUX',
-    maintainer_email='contact@jonathandekhtiar.eu, marc.moreaux@laas.fr',
+    maintainer_email='contact@jonathandekhtiar.eu, mr.moreaux@gmail.com',
 
     # The licence under which the project is released
     license='MIT',
