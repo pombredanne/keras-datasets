@@ -53,8 +53,11 @@ We follow the "fork-and-pull" Git workflow.
 NOTE: Be sure to merge the latest from "upstream" before making a pull
 request!
 
-Installation
-------------
+Installation of the library
+---------------------------
+
+Installation for production
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Available with the Python Package Index:
 https://pypi.python.org/pypi/keras-datasets/
@@ -70,36 +73,90 @@ If prefered, the library can be compiled with following commands:
     ## First clone the repository
     git clone https://github.com/DEKHTIARJonathan/keras-datasets.git
 
-    ## Create a virtualenv
-    virtualenv venv
-
-    # Linux: activate the virtualenv
-    source venv/bin/activate
-
-    # Windows activate the virtualenv
-    venv\Scripts\activate.bat
-
-    ## Then install the library
-    pip install -r requirements.txt
-
-    ## Then install the library
+    cd keras-datasets
     python setup.py install
 
-Running Unit Tests
-------------------
+Development Commands and Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: sh
+Please run tests before commit to the repository or sending a Pull
+Request. If you add any new functionnality, be sure to implement the
+corresponding tests.
 
-    # Linux
+.. code:: shell
+
+    ## First clone the repository and change the working directory
+    git clone https://github.com/DEKHTIARJonathan/keras-datasets.git
+    cd keras-datasets
+
+    ########################################################
+    # =============== Create a virtualenv  =============== #
+    ########################################################
+
+    ## Install virtualenv if necessary
+    pip install virtualenv
+
+    ## Then create a virtualenv called venv inside
+    virtualenv venv
+
+    ########################################################
+    # ============= Activate the virtualenv  ============= #
+    ########################################################
+
+    # Linux:
     source venv/bin/activate
 
-    # Windows
+    # Windows:
     venv\Scripts\activate.bat
 
-    # Then
-    coverage run manage.py test
+    ##########################################################
+    # ======== Install the development dependencies  ======= #
+    ##########################################################
+
+    ## Only necessary if you want to contribute to the project
+    pip install -e .[dev]
+
+    ########################################################
+    # =============== Running Unit Tests  =============== #
+    ########################################################
+
+    coverage run setup.py test
     coverage report -m
     coverage html
+
+    ########################################################
+    # ================= Install Library  ================= #
+    ########################################################
+
+    python setup.py install
+
+Where to add new dependencies in your contributions ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Your contribution requires to install a new package in the dependencies.
+Be sure to only add a package if it is only necessary and no other
+existing package is required.
+
+If so, please edit the file `setup.py <setup.py>`__ and edit the
+following settings:
+
+.. code:: python
+
+    #  If your package is necessary to make the library work, please add the package here:
+    install_requires=[
+        'prod_package1==1.2.3',
+        'prod_package2==2.3.4',
+        '...'
+    ],
+
+    #  If your package is necessary for development / testing / upload to PyPI but not for the production version, please add the package here:
+    extras_require={
+        'dev': [
+            'dev_package1==1.2.3',
+            'dev_package2==2.3.4',
+            '...'
+        ]
+    }
 
 .. |Open Source Love| image:: https://badges.frapsoft.com/os/v2/open-source.svg?v=103
    :target: https://opensource.org/licenses/MIT/

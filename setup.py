@@ -53,12 +53,12 @@ setup(
         #  7 - Inactive
         'Development Status :: 1 - Planning',
 
-        # Indicate who your project is intended for        
+        # Indicate who your project is intended for
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'Intended Audience :: Information Technology',
-        
-        # Indicate what your project relates to  
+
+        # Indicate what your project relates to
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Image Recognition',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
@@ -89,17 +89,31 @@ setup(
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['numpy', 'scipy', 'keras>=2.0.6', 'Pillow'],
+    install_requires=[
+        'future==0.16.0',
+        'numpy==1.13.1',
+        'scipy==0.19.1',
+        'Pillow==4.2.1',
+        'tensorflow==1.3.0',
+        'Theano==0.9.0',
+        'Keras==2.0.6',
+    ],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
     # for example:
-    # $ pip install -e .[dev,test]
+    # $ pip install -e .[dev,travis]
     extras_require={
-        'dev': ['check-manifest'],
-        'test': ['coverage'],
+        'dev': [
+            'twine',
+            'check-manifest',
+            'coverage'
+        ],
+        'travis': [
+            'coverage',
+            'coveralls'
+        ]
     },
+
     zip_safe=False,
-    test_suite='nose.collector',
-    tests_require=['nose'],
 )

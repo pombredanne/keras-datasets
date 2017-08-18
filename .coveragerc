@@ -1,7 +1,14 @@
-[report]
+# .coveragerc to control coverage.py
+[run]
+branch = False
+
+source =
+    keras_datasets
+
 omit =
-    */python?.?/*
-    */site-packages/nose/*
-    *__init__*
-    */tests/*
-    */venv/*
+    /*/tests/*
+
+[report]
+
+[html]
+directory = htmlcov
