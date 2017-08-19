@@ -90,13 +90,13 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        'future==0.16.0',
-        'numpy==1.13.1',
-        'scipy==0.19.1',
-        'Pillow==4.2.1',
-        'tensorflow==1.3.0',
-        'Theano==0.9.0',
-        'Keras==2.0.6',
+        'future>=0.16,<0.17',
+        'numpy>=1.13,<1.14',
+        'scipy>=0.19,<0.20',
+        'Pillow>=4.2,<4.3',
+        'tensorflow>=1.3,<1.4',
+        'Theano>=0.9,<0.10',
+        'Keras>=2.0,<2.1',
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -111,6 +111,7 @@ setup(
         ],
         'travis': [
             'coverage',
+            'codecov',
             'coveralls'
         ]
     },

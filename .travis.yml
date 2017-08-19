@@ -14,7 +14,8 @@ script:
   coverage run setup.py test
 
 after_success:
-  coveralls
+- coveralls
+- codecov  --token=c456a710-22ea-4031-a34d-4890f8388bfa
 
 notifications:
 - email: false

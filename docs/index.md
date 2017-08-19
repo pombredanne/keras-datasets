@@ -9,6 +9,7 @@ A package to download common deep learning and machine datasets, convert them in
 
 [![Build Status](https://travis-ci.org/DEKHTIARJonathan/keras-datasets.svg?branch=master)](https://travis-ci.org/DEKHTIARJonathan/keras-datasets)
 [![Coverage](https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master)](https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master)
+[![codecov](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets/branch/master/graph/badge.svg)](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets)
 [![PyUP Updates](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 [![Python 3](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 
@@ -54,7 +55,11 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 Available with the Python Package Index: <https://pypi.python.org/pypi/keras-datasets/>
 
 ```shell
+# Last Stable Version
 pip install keras-datasets
+
+# Last Alpha Versions
+pip install --pre keras-datasets
 ```
 
 If prefered, the library can be compiled with following commands:

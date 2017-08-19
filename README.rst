@@ -8,7 +8,7 @@ runner
 |Open Source Love| |Open Source License| |GitHub contributors|
 |Documentation Status|
 
-|Build Status| |Coverage| |PyUP Updates| |Python 3|
+|Build Status| |Coverage| |codecov| |PyUP Updates| |Python 3|
 
 |PyPI Python Versions| |GitHub release| |PyPI Release| |PyPI Wheel|
 |PyPI|
@@ -64,7 +64,11 @@ https://pypi.python.org/pypi/keras-datasets/
 
 .. code:: shell
 
+    # Last Stable Version
     pip install keras-datasets
+
+    # Last Alpha Versions
+    pip install --pre keras-datasets
 
 If prefered, the library can be compiled with following commands:
 
@@ -170,6 +174,8 @@ following settings:
    :target: https://travis-ci.org/DEKHTIARJonathan/keras-datasets
 .. |Coverage| image:: https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master
    :target: https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master
+.. |codecov| image:: https://codecov.io/gh/DEKHTIARJonathan/keras-datasets/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/DEKHTIARJonathan/keras-datasets
 .. |PyUP Updates| image:: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
 .. |Python 3| image:: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg
