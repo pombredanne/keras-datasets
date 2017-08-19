@@ -5,7 +5,7 @@ A package to download common deep learning and machine datasets, convert them in
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://opensource.org/licenses/MIT/)
 [![Open Source License](https://img.shields.io/github/license/DEKHTIARJonathan/keras-datasets.svg)](https://github.com/DEKHTIARJonathan/keras-datasets/releases)
 [![GitHub contributors](https://img.shields.io/github/contributors/DEKHTIARJonathan/keras-datasets.svg)](https://github.com/DEKHTIARJonathan/keras-datasets)
-[![Documentation Status](https://readthedocs.org/projects/keras-datasets/badge/?version=latest)](http://keras-datasets.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat&maxAge=86400&label=documentation)](http://keras-datasets.readthedocs.io/en/latest/?badge=latest)
 
 [![Build Status](https://travis-ci.org/DEKHTIARJonathan/keras-datasets.svg?branch=master)](https://travis-ci.org/DEKHTIARJonathan/keras-datasets)
 [![Coverage](https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master)](https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master)

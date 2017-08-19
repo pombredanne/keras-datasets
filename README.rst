@@ -168,7 +168,7 @@ following settings:
    :target: https://github.com/DEKHTIARJonathan/keras-datasets/releases
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/DEKHTIARJonathan/keras-datasets.svg
    :target: https://github.com/DEKHTIARJonathan/keras-datasets
-.. |Documentation Status| image:: https://readthedocs.org/projects/keras-datasets/badge/?version=latest
+.. |Documentation Status| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat&maxAge=86400&label=documentation
    :target: http://keras-datasets.readthedocs.io/en/latest/?badge=latest
 .. |Build Status| image:: https://travis-ci.org/DEKHTIARJonathan/keras-datasets.svg?branch=master
    :target: https://travis-ci.org/DEKHTIARJonathan/keras-datasets

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-VERSION            = (0, 1, 1, 'alpha1')
+VERSION            = (0, 1, 1, 'a1')
 __version__        = '.'.join(map(str, VERSION[:3])) + "".join(VERSION[3:])
 
 __package_name__   = 'keras-datasets'
