@@ -1,43 +1,43 @@
 #!/usr/bin/env python
-import os
+import os, codecs
 
 try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup, find_packages
 
-# To use a consistent encoding
-from codecs import open
-
-from keras_datasets import __version__
+from keras_datasets import __version__, __contact_names__, __contact_emails__, __repository_url__, __download_url__, __description__, __package_name__, __homepage__, __keywords__
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(here, 'README.rst'), encoding='utf-8') as readme:
-    long_description = readme.read()
+if os.path.exists('README.rst'):
+    # codec is used for consistent encoding
+    long_description = codecs.open(os.path.join(here, 'README.rst'), 'r', 'utf-8').read()
+else:
+    long_description = 'See ' + __homepage__
 
 setup(
-    name='keras-datasets',
+    name=__package_name__,
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version=__version__,
 
-    description='A package to download common deep learning and machine datasets, convert them in hdf5 format in order to be in your Keras graph with a queue runner',
+    description=__description__,
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/DEKHTIARJonathan/keras-datasets',
-    download_url='https://github.com/DEKHTIARJonathan/keras-datasets/archive/master.zip',
+    url=__repository_url__,
+    download_url=__download_url__,
 
     # Author details
-    author='Jonathan DEKHTIAR, Marc MOREAUX',
-    author_email='contact@jonathandekhtiar.eu, mr.moreaux@gmail.com',
+    author=__contact_names__,
+    author_email=__contact_emails__,
 
     # maintainer Details
-    maintainer='Jonathan DEKHTIAR, Marc MOREAUX',
-    maintainer_email='contact@jonathandekhtiar.eu, mr.moreaux@gmail.com',
+    maintainer=__contact_names__,
+    maintainer_email=__contact_emails__,
 
     # The licence under which the project is released
     license='MIT',
@@ -82,7 +82,7 @@ setup(
         'Natural Language :: English',
         'Operating System :: OS Independent',
     ],
-    keywords='keras dataset deeplearning library machinelearning datascience python python3 python2',
+    keywords=__keywords__,
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     # List run-time dependencies here.  These will be installed by pip when
@@ -115,6 +115,5 @@ setup(
             'coveralls'
         ]
     },
-
     zip_safe=True,
 )
