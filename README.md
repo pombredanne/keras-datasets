@@ -11,6 +11,7 @@ A package to download common deep learning and machine datasets, convert them in
 [![Coverage](https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master)](https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master)
 [![codecov](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets/branch/master/graph/badge.svg)](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets)
 [![PyUP Updates](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
+[![Requirements Status](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements.svg?branch=master)](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements/?branch=master)
 [![Python 3](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 
 [![PyPI Python Versions](https://img.shields.io/pypi/pyversions/keras-datasets.svg)](https://pypi.python.org/pypi/keras-datasets/)
