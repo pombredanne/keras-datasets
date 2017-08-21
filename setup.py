@@ -15,7 +15,17 @@ if os.path.exists('README.rst'):
     long_description = codecs.open(os.path.join(here, 'README.rst'), 'r', 'utf-8').read()
 else:
     long_description = 'See ' + __homepage__
+    
+    
+# ======================== Reading Requirements files as TXT files ========================    
 
+def req_file(filename):
+    with open(filename) as f:
+        content = f.readlines()
+    # you may also want to remove whitespace characters like `\n` at the end of each line
+    return [x.strip() for x in content] 
+
+# =================================== Setup Operations ====================================  
 setup(
     name=__package_name__,
 
@@ -89,31 +99,15 @@ setup(
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=[
-        'future>=0.16,<0.17',
-        'numpy>=1.13,<1.14',
-        'scipy>=0.19,<0.20',
-        'Pillow>=4.2,<4.3',
-        'tensorflow>=1.3,<1.4',
-        'Theano>=0.9,<0.10',
-        'Keras>=2.0,<2.1',
-    ],
+    install_requires=req_file("requirements_lib.txt"),
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
     # for example:
     # $ pip install -e .[dev,travis]
     extras_require={
-        'dev': [
-            'twine',
-            'check-manifest',
-            'coverage'
-        ],
-        'travis': [
-            'coverage',
-            'codecov',
-            'coveralls'
-        ]
+        'dev': req_file("requirements_dev.txt"),
+        'travis': req_file("requirements_travis.txt")
     },
     zip_safe=True,
 )
