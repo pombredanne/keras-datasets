@@ -34,22 +34,22 @@ requirements:
     - requirements_lib.txt
     
     # Requirements for the development 
-    - requirements_dev.txt:
+    - requirements_dev.txt
     
     # Requirements for builds performed by Travis
-    - requirements_travis.txt:
+    - requirements_travis.txt
       
 # add a label to pull requests, default is not set
 # requires private repo permissions, even on public repos
 # default: empty
-label_prs: update
+#label_prs: update
 
 # assign users to pull requests, default is not set
 # requires private repo permissions, even on public repos
 # default: empty
-assignees:
- - DEKHTIARJonathan
- - marc-moreaux
+#assignees:
+# - DEKHTIARJonathan
+# - marc-moreaux
 
 # configure the branch prefix the bot is using
 # default: pyup-
