@@ -10,7 +10,7 @@ update: all
 # configure dependency pinning globally
 # default: True
 # allowed: True, False
-pin: True
+pin: False
 
 # set the default branch
 # default: empty, the default branch on GitHub
@@ -31,22 +31,13 @@ search: True
 # allowed: list
 requirements:
     # Requirements for the library
-    - requirements_lib.txt:
-        # update all dependencies and pin them
-        update: all
-        pin: True
+    - requirements_lib.txt
     
     # Requirements for the development 
     - requirements_dev.txt:
-        # update all dependencies and pin them
-        update: all
-        pin: True
     
     # Requirements for builds performed by Travis
     - requirements_travis.txt:
-        # update all dependencies and pin them
-        update: all
-        pin: True
       
 # add a label to pull requests, default is not set
 # requires private repo permissions, even on public repos
