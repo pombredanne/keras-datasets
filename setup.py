@@ -1,31 +1,43 @@
 #!/usr/bin/env python
-import os, codecs
+import os
+import codecs
 
 try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup, find_packages
 
-from keras_datasets import __version__, __contact_names__, __contact_emails__, __repository_url__, __download_url__, __description__, __package_name__, __homepage__, __keywords__
+from keras_datasets import (__version__,
+                            __contact_names__,
+                            __contact_emails__,
+                            __repository_url__,
+                            __download_url__,
+                            __description__,
+                            __package_name__,
+                            __homepage__,
+                            __keywords__)
 
 here = os.path.abspath(os.path.dirname(__file__))
 
 if os.path.exists('README.rst'):
     # codec is used for consistent encoding
-    long_description = codecs.open(os.path.join(here, 'README.rst'), 'r', 'utf-8').read()
+    long_description = codecs.open(os.path.join(here, 'README.rst'),
+                                   'r',
+                                   'utf-8').read()
 else:
     long_description = 'See ' + __homepage__
-    
-    
-# ======================== Reading Requirements files as TXT files ========================    
+
+
+# ======================== Reading Requirements files as TXT files ========================
 
 def req_file(filename):
     with open(filename) as f:
         content = f.readlines()
     # you may also want to remove whitespace characters like `\n` at the end of each line
-    return [x.strip() for x in content] 
+    return [x.strip() for x in content]
 
-# =================================== Setup Operations ====================================  
+
+# =================================== Setup Operations ====================================
 setup(
     name=__package_name__,
 
