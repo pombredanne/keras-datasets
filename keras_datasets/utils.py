@@ -11,6 +11,8 @@ import requests
 import data_utils
 import numpy as np
 import threading
+import os
+
 
 from enum import Enum
 
@@ -103,7 +105,7 @@ class Iterator(object):
 
     def _download(self):
         # Download the dataset
-        data_utils.get_file(self.url, self.name)
+        data_utils.get_file(self.name, self.url)
 
     def __iter__(self):
         # Needed if we want to do something like:
