@@ -5,14 +5,15 @@ from __future__ import (unicode_literals,
                         absolute_import,
                         division,
                         print_function)
-import datetime
-import time
-import requests
-import data_utils
-import numpy as np
-import threading
 
+
+import time, datetime
+import requests, threading
+
+import numpy as np
 from enum import Enum
+
+from keras_datasets import data_utils
 
 
 class Compression(Enum):

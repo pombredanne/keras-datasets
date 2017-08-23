@@ -1,21 +1,15 @@
 """Utilities for file download and caching."""
-from __future__ import absolute_import
-from __future__ import print_function
 
-import hashlib
-import multiprocessing
-import os
-import random
-import shutil
-import sys
-import tarfile
-import threading
-import time
-import zipfile
+from __future__ import absolute_import, print_function
+
+import os, sys, random, time # System Libraries
+import zipfile, tarfile, hashlib, shutil
+import multiprocessing,threading
+
 from abc import abstractmethod
 from multiprocessing.pool import ThreadPool
-
 import numpy as np
+
 import six
 from six.moves.urllib.error import HTTPError
 from six.moves.urllib.error import URLError
@@ -26,7 +20,7 @@ try:
 except ImportError:
     import Queue as queue
 
-from ..utils.generic_utils import Progbar
+from keras.utils.generic_utils import Progbar
 
 if sys.version_info[0] == 2:
     def urlretrieve(url, filename, reporthook=None, data=None):

@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from .. import utils
-# from .. import data_utils
-# import os
+from __future__ import (unicode_literals,
+                        absolute_import,
+                        division,
+                        print_function)
+                        
+from keras_datasets import utils
 
 
 class Ucf101(utils.Iterator):
