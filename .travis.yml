@@ -18,7 +18,10 @@ after_success:
 - codecov  --token=c456a710-22ea-4031-a34d-4890f8388bfa
 
 notifications:
-- email: false
+  matrix:
+  - email: false
+  slack:
+    secure: Y5QdU5WmbW76//1YUrst2uFTwMb7UVuCBGsRH/87CggzlJKTNVLI8FLti5qk6/myLCYp9ZFo7vOCdntwBwOKHmdw0DEmMKYoQE0bEF6nAJrsIvz8s61SSbTJPQ2ptXN8sqvs3VjxCB6fCqD9HpyKSXQQSaW8Iz8n7B9qtt2CO0ceU8T3FPkZKIjwOQOQu+11PNOhdEERC4/WeG08jGnEYnjLO9OssPu2ptLDm6WPAgZ58vFdCUqW91ywB1QOxIeKRpgb76iL2v55ZHFf5N/5IDo/wL2qELXgfs7Kph2dvJptmlF7WASFLhi3v4zwp4qIGiICkdD9niLdAAz71BqXNharyXZY8trcjwBISZ5T5bNhgGmGeWWVy1F4AVEiqrAO9oVxqJWeuHz32gfWmWqPeb3yImBAZdpHh4n6pjzjHwooDSMQcBBuj9Kg5YIt6r6fdcnMdeEi3CH6d686pzCzWTDgkMgAkJfAVpmIgj13ZCkB3roNvSbmn0yDe85ZduCz81eIAxSf+7XbUVBKzLQNJVI6ay9ZNCYNtM2hR9nIsglngn8IsiPuajND+m/gcdniow1iYieIDXOdRaX/COCJGqE8KwOqbb/C+0sWQmZOtFpAhACcKCmXdERTh/YMD/dxUW8E6sbb+ZTg9YS7wHdoAFAtfB640serHy5UUuEDjnc=
 
 before_deploy:
 - python setup.py sdist
