@@ -103,7 +103,7 @@ class Iterator(object):
 
     def _download(self):
         # Download the dataset
-        data_utils.get_file(self.url, self.name)
+        data_utils.get_file(self.name, self.url)
 
     def __iter__(self):
         # Needed if we want to do something like:
