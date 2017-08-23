@@ -173,7 +173,7 @@ following settings:
    :target: http://keras-datasets.readthedocs.io/en/latest/?badge=latest
 .. |Build Status| image:: https://travis-ci.org/DEKHTIARJonathan/keras-datasets.svg?branch=master
    :target: https://travis-ci.org/DEKHTIARJonathan/keras-datasets
-.. |Coverage| image:: https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master
+.. |Coverage| image:: https://img.shields.io/coveralls/DEKHTIARJonathan/keras-datasets/master.svg
    :target: https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master
 .. |codecov| image:: https://codecov.io/gh/DEKHTIARJonathan/keras-datasets/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/DEKHTIARJonathan/keras-datasets

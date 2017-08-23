@@ -8,7 +8,7 @@ A package to download common deep learning and machine datasets, convert them in
 [![Documentation Status](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat&maxAge=86400&label=documentation)](http://keras-datasets.readthedocs.io/en/latest/?badge=latest)
 
 [![Build Status](https://travis-ci.org/DEKHTIARJonathan/keras-datasets.svg?branch=master)](https://travis-ci.org/DEKHTIARJonathan/keras-datasets)
-[![Coverage](https://coveralls.io/repos/github/DEKHTIARJonathan/keras-datasets/badge.svg?branch=master)](https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master)
+[![Coverage](https://img.shields.io/coveralls/DEKHTIARJonathan/keras-datasets/master.svg)](https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master)
 [![codecov](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets/branch/master/graph/badge.svg)](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets)
 [![PyUP Updates](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 [![Requirements Status](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements.svg?branch=master)](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements/?branch=master)
