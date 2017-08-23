@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from .. import utils
+import os
 # from .. import data_utils
-# import os
 
 
 class Ucf101(utils.Iterator):
@@ -20,6 +20,9 @@ class Ucf101(utils.Iterator):
         self.url = "http://www.vision.caltech.edu/Image_Datasets/Caltech101/101_ObjectCategories.tar.gz"
         self.name = 'ucf101'
         self._download()
+        self.path = os.path.expanduser(os.path.join('~',
+                                                    '.keras_datasets',
+                                                    self.name))
         super(Ucf101, self).__init__(n_samples=1000, batch_size=10)
 
     def _sample_reader(index):
