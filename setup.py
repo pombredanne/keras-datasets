@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-import os
-import codecs
+import os, codecs, unittest
 
 try:
     from setuptools import setup, find_packages
@@ -16,6 +15,11 @@ from keras_datasets import (__version__,
                             __package_name__,
                             __homepage__,
                             __keywords__)
+
+def testRunnerSuite():
+    test_loader = unittest.TestLoader()
+    test_suite = test_loader.discover('keras_datasets', pattern='test_*.py')
+    return test_suite
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -105,6 +109,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     keywords=__keywords__,
+    test_suite='setup.testRunnerSuite',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     # List run-time dependencies here.  These will be installed by pip when
