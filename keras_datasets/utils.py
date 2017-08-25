@@ -11,12 +11,13 @@ from __future__ import (
 import datetime
 import time
 import requests
+import threading
+import csv
 
 from enum import Enum
-import csv
-import numpy as np
 from PIL import Image as pil_image
 
+import numpy as np
 
 
 class Compression(Enum):
