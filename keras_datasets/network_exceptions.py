@@ -58,6 +58,7 @@ ERROR_CODE_EXCEPTION_MAPPING = {
     527: "Railgun Error",
 }
 
+
 def get_exception_for_error_code(error_code):
     error_msg = ERROR_CODE_EXCEPTION_MAPPING.get(error_code, "Unlisted Error")
     return "Request returned: Error %s => %s" % (error_code, error_msg)

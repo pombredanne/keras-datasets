@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import (unicode_literals,
-                        absolute_import,
-                        division,
-                        print_function)
+from __future__ import (
+    unicode_literals,
+    absolute_import,
+    division,
+    print_function
+)
+
+import datetime
+import time
+import requests
+
 from enum import Enum
 import csv
 import numpy as np
 from PIL import Image as pil_image
+
 
 
 class Compression(Enum):
@@ -22,7 +30,6 @@ class Subset(Enum):
     TEST = 2
     VALIDATION = 3
 
-
 compression_suffix = {
     Compression.NONE: '',
     Compression.GZIP: 'gzip',
@@ -31,8 +38,8 @@ compression_suffix = {
 
 
 subset_suffix = {
-    Subset.TRAIN: 'train',
-    Subset.TEST: 'test',
+    Subset.TRAIN:      'train',
+    Subset.TEST:       'test',
     Subset.VALIDATION: 'validation'
 }
 
