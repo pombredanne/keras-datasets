@@ -6,13 +6,14 @@ from __future__ import (unicode_literals,
                         division,
                         print_function)
 
-import time, datetime
-import requests, threading
-
-import numpy as np
-from enum import Enum
-
 from keras_datasets import data_utils
+import time
+import datetime
+import requests, threading
+from enum import Enum
+import csv
+import numpy as np
+from PIL import Image as pil_image
 
 
 class Compression(Enum):
@@ -103,7 +104,7 @@ class Iterator(object):
 
     def _download(self):
         # Download the dataset
-        data_utils.get_file(self.name, self.url)
+        raise NotImplementedError("Subclasses should implement this!")
 
     def __iter__(self):
         # Needed if we want to do something like:
@@ -113,9 +114,84 @@ class Iterator(object):
     def __next__(self, *args, **kwargs):
         return self.next(*args, **kwargs)
 
-    def _sample_reader(self, index, *args, **kwargs):
+    def _sample_decoder(self, path, *args, **kwargs):
         raise NotImplementedError("Subclasses should implement this!")
 
     def next(self, *args, **kwargs):
         # Maybe do a mother class with _flow_index and _sample reader
-        raise NotImplementedError("Subclasses should implement this!")
+        with self.lock:
+            index_array, current_index, current_batch_size = next(
+                self.index_generator)
+
+        # Open table of reference as an array of arrays.
+        # table_ref = [["path1", class_a], ["path2", class_a] ...]
+        table_ref = []
+        with open(self.ref_table, 'r') as mfile:
+            for row in csv.reader(mfile):
+                if len(row) >= 2:
+                    x, y = row
+                    y = int(y)
+                    table_ref.append((x,y))
+
+            table_ref = table_ref[1:]  # Remove 1st line
+
+
+        batch_x = []
+        batch_y = []
+        for i, j in enumerate(index_array):
+            path = table_ref[j][0]
+            batch_y.append(table_ref[j][1])
+            batch_x.append(self._sample_decoder(path))  
+            # Maybe add transorfmation options
+            # Maybe save to h5py
+
+        return batch_x, batch_y
+
+
+def load_img(path, grayscale=False, target_size=None):
+    """Loads an image into PIL format.
+
+    # Arguments
+        path: Path to image file
+        grayscale: Boolean, whether to load the image as grayscale.
+        target_size: Either `None` (default to original size)
+            or tuple of ints `(img_height, img_width)`.
+
+    # Returns
+        A PIL Image instance.
+
+    # Raises
+        ImportError: if PIL is not available.
+    """
+    if pil_image is None:
+        raise ImportError('Could not import PIL.Image. '
+                          'The use of `array_to_img` requires PIL.')
+    img = pil_image.open(path)
+    if grayscale:
+        if img.mode != 'L':
+            img = img.convert('L')
+    else:
+        if img.mode != 'RGB':
+            img = img.convert('RGB')
+    if target_size:
+        hw_tuple = (target_size[1], target_size[0])
+        if img.size != hw_tuple:
+            img = img.resize(hw_tuple)
+    return img
+
+def img_to_array(img):
+    """Converts a PIL Image instance to a Numpy array.
+
+    # Arguments
+        img: PIL Image instance.
+
+    # Returns
+        A 3D Numpy array.
+
+    # Raises
+        ValueError: if invalid `img` is passed.
+    """
+    x = np.asarray(img, dtype='float32')
+    if len(x.shape) == 2:
+        x = x.reshape((x.shape[0], x.shape[1], 1))
+    return x
