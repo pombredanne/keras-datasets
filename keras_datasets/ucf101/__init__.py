@@ -6,8 +6,11 @@ from __future__ import (unicode_literals,
                         division,
                         print_function)
 
-import os
+
 import csv
+import os
+import six
+
 from keras_datasets import data_utils
 from keras_datasets import utils
 
@@ -59,9 +62,18 @@ class Ucf101(utils.Iterator):
 
         # Construct CSV
         with open(ref_table_path, 'w') as csvfile:
+
+            if six.PY2:
+                delimiter = b','
+                quotechar = b'|'
+
+            else:
+                delimiter = ','
+                quotechar = '|'
+
             ref_table = csv.writer(csvfile,
-                                   delimiter=',',
-                                   quotechar='|',
+                                   delimiter=delimiter,
+                                   quotechar=delimiter,
                                    quoting=csv.QUOTE_MINIMAL)
             ["FILE_PATH, class_id, class_localization"]
             for root, dirs, files in os.walk(data_dir):

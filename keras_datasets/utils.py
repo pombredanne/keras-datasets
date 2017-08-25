@@ -8,11 +8,13 @@ from __future__ import (
     print_function
 )
 
-import datetime
-import time
-import requests
-import threading
+
 import csv
+import datetime
+import requests
+import six
+import threading
+import time
 
 from enum import Enum
 from PIL import Image as pil_image
