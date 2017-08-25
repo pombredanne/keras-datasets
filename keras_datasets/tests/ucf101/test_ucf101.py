@@ -3,6 +3,7 @@
 from unittest import TestCase
 from keras_datasets.ucf101 import Ucf101
 
+
 class TestStringMethods(TestCase):
 
     def test_upper(self):
@@ -18,6 +19,7 @@ class TestStringMethods(TestCase):
         # check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
+
 
 class MyTest(TestCase):
 

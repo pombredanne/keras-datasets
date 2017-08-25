@@ -5,11 +5,6 @@ from __future__ import (unicode_literals,
                         absolute_import,
                         division,
                         print_function)
-
-from keras_datasets import data_utils
-import time
-import datetime
-import requests, threading
 from enum import Enum
 import csv
 import numpy as np
@@ -131,17 +126,16 @@ class Iterator(object):
                 if len(row) >= 2:
                     x, y = row
                     y = int(y)
-                    table_ref.append((x,y))
+                    table_ref.append((x, y))
 
             table_ref = table_ref[1:]  # Remove 1st line
-
 
         batch_x = []
         batch_y = []
         for i, j in enumerate(index_array):
             path = table_ref[j][0]
             batch_y.append(table_ref[j][1])
-            batch_x.append(self._sample_decoder(path))  
+            batch_x.append(self._sample_decoder(path))
             # Maybe add transorfmation options
             # Maybe save to h5py
 
@@ -178,6 +172,7 @@ def load_img(path, grayscale=False, target_size=None):
         if img.size != hw_tuple:
             img = img.resize(hw_tuple)
     return img
+
 
 def img_to_array(img):
     """Converts a PIL Image instance to a Numpy array.
