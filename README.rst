@@ -9,7 +9,7 @@ runner
 |Documentation Status|
 
 |Build Status| |Coverage| |codecov| |PyUP Updates| |Requirements Status|
-|Python 3|
+|Python 3| |Code Health|
 
 |PyPI Python Versions| |GitHub release| |PyPI Release| |PyPI Wheel|
 |PyPI|
@@ -183,6 +183,8 @@ following settings:
    :target: https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements/?branch=master
 .. |Python 3| image:: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg
    :target: https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/
+.. |Code Health| image:: https://landscape.io/github/DEKHTIARJonathan/keras-datasets/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/DEKHTIARJonathan/keras-datasets/master
 .. |PyPI Python Versions| image:: https://img.shields.io/pypi/pyversions/keras-datasets.svg
    :target: https://pypi.python.org/pypi/keras-datasets/
 .. |GitHub release| image:: https://img.shields.io/github/release/DEKHTIARJonathan/keras-datasets.svg?label=github-release
