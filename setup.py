@@ -9,7 +9,7 @@ try:
         setup,
         find_packages
     )
-    
+
 except ImportError:
     from distutils.core import (
         setup,
@@ -27,6 +27,7 @@ from keras_datasets import (
     __homepage__,
     __keywords__
 )
+
 
 def testRunnerSuite():
     test_loader = unittest.TestLoader()

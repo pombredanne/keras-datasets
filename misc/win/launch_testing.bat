@@ -2,6 +2,5 @@
 cd "%~p1"
 cd "../.."
 call venv\Scripts\activate.bat
-coverage run setup.py test
-coverage report
+py.test
 PAUSE;

@@ -8,7 +8,7 @@ from __future__ import (unicode_literals,
 
 import os
 import csv
-from .. import data_utils
+from keras_datasets import data_utils
 from keras_datasets import utils
 
 
