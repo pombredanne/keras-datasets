@@ -112,9 +112,9 @@ def _extract_archive(file_path, path='.', archive_format='auto'):
     return False
 
 
-def get_file(fname,
-             origin,
-             untar=False,
+def get_file(origin,
+             fname=None,
+             fdir=None,
              md5_hash=None,
              file_hash=None,
              cache_subdir='datasets',
@@ -137,8 +137,7 @@ def get_file(fname,
         fname: Name of the file. If an absolute path `/path/to/file.txt` is
             specified the file will be saved at that location.
         origin: Original URL of the file.
-        untar: Deprecated in favor of 'extract'.
-            boolean, whether the file should be decompressed
+        fdir: sub-subdirectory resulting in ~/.keras_datasets/datasets/<fdir>
         md5_hash: Deprecated in favor of 'file_hash'.
             md5 hash of the file for verification
         file_hash: The expected hash string of the file after download.
@@ -169,15 +168,14 @@ def get_file(fname,
     datadir_base = os.path.expanduser(cache_dir)
     if not os.access(datadir_base, os.W_OK):
         datadir_base = os.path.join('/tmp', '.keras_datasets')
-    datadir = os.path.join(datadir_base, cache_subdir)
+    datadir = os.path.join(datadir_base, cache_subdir, fdir)
     if not os.path.exists(datadir):
         os.makedirs(datadir)
 
-    if untar:
-        untar_fpath = os.path.join(datadir, fname)
-        fpath = untar_fpath + '.tar.gz'
-    else:
-        fpath = os.path.join(datadir, fname)
+    if fname is None:
+        fname = origin.split('/')[-1]
+
+    fpath = os.path.join(datadir, fname)
 
     download = False
     if os.path.exists(fpath):
@@ -193,7 +191,7 @@ def get_file(fname,
         download = True
 
     if download:
-        print('Downloading data from', origin)
+        print('Downloading data from', origin, ' to', fpath)
 
         class ProgressTracker(object):
             # Maintain progbar for the lifetime of download.
@@ -221,11 +219,6 @@ def get_file(fname,
                 os.remove(fpath)
             raise
         ProgressTracker.progbar = None
-
-    if untar:
-        if not os.path.exists(untar_fpath):
-            _extract_archive(fpath, datadir, archive_format='tar')
-        return untar_fpath
 
     if extract:
         _extract_archive(fpath, datadir, archive_format)
