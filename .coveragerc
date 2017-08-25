@@ -1,12 +1,14 @@
 # .coveragerc to control coverage.py
 [run]
-branch = False
+branch = True
 
 source =
     keras_datasets
 
 omit =
-    /*/tests/*
+	venv/*
+	venv_linux/*
+	/home/travis/virtualenv/*/lib/*/site-packages/*
 
 [report]
 
