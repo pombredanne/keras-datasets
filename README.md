@@ -11,7 +11,7 @@ A package to download common deep learning and machine datasets, convert them in
 [![Coverage](https://img.shields.io/coveralls/DEKHTIARJonathan/keras-datasets/master.svg)](https://coveralls.io/github/DEKHTIARJonathan/keras-datasets?branch=master)
 [![codecov](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets/branch/master/graph/badge.svg)](https://codecov.io/gh/DEKHTIARJonathan/keras-datasets)
 [![PyUP Updates](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
-[![Requirements Status](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements.svg?branch=master)](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements/?branch=master)
+[![Requirements Status](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements.svg?branch=dev)](https://requires.io/github/DEKHTIARJonathan/keras-datasets/requirements/?branch=dev)
 [![Python 3](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/python-3-shield.svg)](https://pyup.io/repos/github/DEKHTIARJonathan/keras-datasets/)
 [![Code Health](https://landscape.io/github/DEKHTIARJonathan/keras-datasets/master/landscape.svg?style=flat)](https://landscape.io/github/DEKHTIARJonathan/keras-datasets/master)
 
